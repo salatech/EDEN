@@ -86,13 +86,34 @@ btn.onclick=()=>{
 </div> <br><br>
 <div style="display: flex;" id="copyright">
     <p>Copyright &copy & Trademark owned by Tekparadise Ltd</p>
-    <div id="ast-scroll-top" class="ast-scroll-top-icon ast-scroll-to-top-right" data-on-devices="both" style="display: block;">
+    <div id="ast-scroll-top" onclick="topFunction()" class="ast-scroll-top-icon ast-scroll-to-top-right" data-on-devices="both" style="display: block;">
         <span class="ast-icon icon-arrow"><svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve">
                     <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path>
                     </svg></span>	
     </div>
 </div>
 </footer>
+<script>
+    //Get the button
+    var mybutton = document.getElementById("ast-scroll-top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
 </body>
 
 </html>
